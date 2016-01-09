@@ -7,5 +7,5 @@ module.exports = function(RED) {
             node.send(msg);
         });
     }
-    RED.nodes.registerType("dev-input",LowerCaseNode);
+    RED.nodes.registerType("dev-input",DevInput);
 }
