@@ -1,0 +1,19 @@
+{
+  "name": "node-red-contrib-dev-input",
+  "version": "0.0.1",
+  "description": "Basic Node-Red node for use in /dev/input/event reading.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MattGyver/node-red-contrib-dev-input.git"
+  },
+  "author": "Mattias Nord",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MattGyver/node-red-contrib-dev-input/issues"
+  },
+  "homepage": "https://github.com/MattGyver/node-red-contrib-dev-input#readme"
+}
