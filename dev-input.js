@@ -18,12 +18,18 @@ module.exports = function(RED) {
     RED.nodes.createNode(this,config);
     var node = this;
 
-    var FS = require('fs');
+    if (config.device != undefined) {
+      var FS = require('fs');
 
-    FS.createReadStream('/dev/input/event10').on('data', function( buffer ) {
-      msg.payload = parseBuffer(buffer)
-      node.send(msg);
-    });
+      if (!FS.existsSync(''+config.device)) {
+        throw "Can't find device.";
+      }
+
+      FS.createReadStream(''+config.device).on('data', function( buffer ) {
+        msg.payload = parseBuffer(buffer)
+        node.send(msg);
+      });
+    }
 
   }
   RED.nodes.registerType("dev-input",DevInput);
